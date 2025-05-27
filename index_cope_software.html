@@ -7,7 +7,7 @@
         <meta name="author" content="" />
         <title>Creative - Cope Software Theme</title>
         <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="assets/cope_icon.ico" />
         <!-- Bootstrap Icons-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- Google fonts-->
@@ -26,10 +26,10 @@
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto my-2 my-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">Acerca de Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#services">Servicios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">Portafolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
                     </ul>
                 </div>
             </div>
@@ -151,11 +151,11 @@
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/6.jpg" title="Proyecto">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/6.jpg" alt="..." />
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/6.png" title="Proyecto">
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/6.png" alt="..." />
                             <div class="portfolio-box-caption p-3">
                                 <div class="project-category text-white-50">Categoría</div>
-                                <div class="project-name">Proyecto</div>
+                                <div class="project-name">Apps móviles y de Escritorio</div>
                             </div>
                         </a>
                     </div>
@@ -165,7 +165,8 @@
         <!-- Call to action-->
         <section class="page-section bg-dark text-white">
             <div class="container px-4 px-lg-5 text-center">
-                <h2 class="mb-4">Transforma tus ideas en software funcional. Comienza hoy con Cope Software.</h2>
+                <h2 class="mb-4">Transforma tus ideas en software funcional.</h2><h2>Comienza hoy con Cope Software.</h2>
+                <br>
                 <a class="btn btn-light btn-xl" href="#contact">Contáctanos</a>
             </div>
         </section>
@@ -188,29 +189,29 @@
                         <!-- To make this form functional, sign up at-->
                         <!-- https://startbootstrap.com/solution/contact-forms-->
                         <!-- to get an API token!-->
-                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                        <form id="contactForm">
                             <!-- Name input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                                <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
                                 <label for="name">Nombre completo</label>
                                 <div class="invalid-feedback" data-sb-feedback="name:required">Se requiere un nombre.</div>
                             </div>
                             <!-- Correo electrónico input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                                <input class="form-control" id="email" name="email"  type="email" placeholder="name@example.com" data-sb-validations="required,email" />
                                 <label for="email">Correo electrónico</label>
                                 <div class="invalid-feedback" data-sb-feedback="email:required">Se requiere un correo.</div>
                                 <div class="invalid-feedback" data-sb-feedback="email:email">Correo inválido.</div>
                             </div>
                             <!-- Teléfono input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
+                                <input class="form-control" id="phone" name="phone"  type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
                                 <label for="phone">Teléfono</label>
                                 <div class="invalid-feedback" data-sb-feedback="phone:required">Se requiere un número de teléfono.</div>
                             </div>
                             <!-- Mensaje input-->
                             <div class="form-floating mb-3">
-                                <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
+                                <textarea class="form-control" id="message" name="message"  type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
                                 <label for="message">Mensaje</label>
                                 <div class="invalid-feedback" data-sb-feedback="message:required">Se requiere un mensaje.</div>
                             </div>
@@ -218,25 +219,23 @@
                             <!---->
                             <!-- This is what your users will see when the form-->
                             <!-- has successfully submitted-->
-                            <div class="d-none" id="submitSuccessMensaje">
+                            <div class="form-floating mb-3" hidden id="submitSuccessMensaje">
                                 <div class="text-center mb-3">
                                     <div class="fw-bolder">¡Mensaje enviado con éxito!</div>
-                                    To activate this form, sign up at
                                     <br />
-                                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
                                 </div>
                             </div>
                             <!-- Enviar error message-->
                             <!---->
                             <!-- This is what your users will see when there is-->
                             <!-- an error submitting the form-->
-                            <div class="d-none" id="submitErrorMensaje"><div class="text-center text-danger mb-3">¡Error al enviar el mensaje!</div></div>
+                            <div class="form-floating mb-3" hidden id="submitErrorMensaje"><div class="text-center text-danger mb-3">¡Error al enviar el mensaje!</div></div>
                             <!-- Enviar Button-->
-                            <div class="d-grid"><button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Enviar</button></div>
+                            <div class="d-grid"><button class="btn btn-primary btn-xl" id="submitButton" type="submit">Enviar</button></div>
                         </form>
                     </div>
                 </div>
-                <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div hidden class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-4 text-center mb-5 mb-lg-0">
                         <i class="bi-phone fs-2 mb-3 text-muted"></i>
                         <div>+52 (644) 123-4567</div>
@@ -246,7 +245,7 @@
         </section>
         <!-- Footer-->
         <footer class="bg-light py-5">
-            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2023 - Cope Software</div></div>
+            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2025 - Cope Software</div></div>
         </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -258,6 +257,29 @@
         <!-- * *                               SB Forms JS                               * *-->
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        
+
+        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script>
+            (function(){
+                emailjs.init('RrMUA8r5aVyK2K0HS')
+            })();
+        </script>
+
+        <script>
+            document.getElementById('contactForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                emailjs.sendForm('service_u6e59ad', 'template_syzat02', this)
+                .then(() => {
+                    document.getElementById('submitSuccessMensaje').removeAttribute("hidden");
+                }, (error) => {
+                    document.getElementById('submitErrorMensaje').removeAttribute("hidden");
+                    console.log(error);
+                });
+            });
+            </script>
+
+
     </body>
 </html>
